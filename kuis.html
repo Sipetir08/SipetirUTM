@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE-edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>SI PETIR WEBPAGE</title>
+  
+      <!-- Fonts -->
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link
+        href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet"
+      />
+  
+      <!-- Feather Icon -->
+      <script src="https://unpkg.com/feather-icons"></script>
+  
+      <!-- My Style -->
+      <link rel="stylesheet" href="css/style.css" />
+
+      <!-- SweetAlert2 -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    </head>
+  <body>
+    <!-- Navbar Start -->
+    <nav class="navbar">
+      <div class="navbar-logo">
+        <img src="logo-petir.png" alt="petir" />
+        <p>SI PETIR WEBPAGE</p>
+      </div>
+      <div class="navbar-nav">
+        <a href="index.html"><i data-feather="home"></i> Home</a>
+        <a href="kuis.html"><i data-feather="check-square"></i> Kuisioner</a>
+        <a href="proteksi.html"><i data-feather="cloud-lightning"></i> Proteksi</a>
+      </div>
+    </nav>
+    <!--Navbar end-->
+    
+    <!-- Kuis Section Start -->
+    <section id="startKuis" class="start-kuis">
+      <main class="content">
+        <h1>Kuisioner</h1>
+        <h2>SI PETIR WEBPAGE</h2>
+        <p>Yuk Ketahui Apakah Bangunan di Sekitarmu Aman dari Bahaya Sambaran Petir??</p>
+        <button id="start-button">START</button>
+      <div>
+        <a href="#quiz"><i data-feather="chevrons-down"></i></a>
+      </div>
+      </main>
+    </section>
+
+    <!-- Kuis Section 2 -->
+    <section id="quiz">
+      <div id="quiz1" class="kuis1">
+        <h1>Kuisioner Parameter Kebutuhan Sistem Penangkal Petir</h1>
+        <h2>Untuk mengetahui tingkat kebutuhan sistem penangkal petir, pilihlah satu pernyataan yang sesuai dengan kriteria bangunan Anda berdasarkan 5 (lima) parameter indeks berikut:</h2>
+        
+        <div id="question1" class="kuis-content1">
+
+          <!-- ------------Question 1----------- -->
+          <p id="question">1. Indeks A (Bahaya Berdasarkan Jenis Bangunan)</p>
+          <div class="answer">
+            <input type="radio" id="A1" name="answer1" value="-10">
+            <label for="A1"> Bangunan biasaya yang tidak perlu diamankan, baik bangunan maupun isinya</label>
+          </div>
+          <div class="answer">
+            <input type="radio" id="A2" name="answer1" value="0">
+            <label for="A2"> Bangunan yang isinya jarang dipergunakan, misalnya di tengah sawah/ladang,menara, atau tiang dari metal</label>
+          </div>
+          <div class="answer">
+            <input type="radio" id="A3" name="answer1" value="1">
+            <label for="A3"> Bangunan yang berisi peralatan sehari-hari atau tempat tinggal, misalnya rumah tinggal, industri kecil, atau stasiun kereta api</label>
+          </div>
+          <div class="answer">
+            <input type="radio" id="A4" name="answer1" value="2">
+            <label for="A4"> Bangunan atau isinya cukup penting misalnya menara air, toko barang berharga, dan kantor pemerintah</label>
+          </div>
+          <div class="answer">
+            <input type="radio" id="A5" name="answer1" value="3">
+            <label for="A5"> Bangunan yang isinya banyak sekali orang, misalnya bioskop, sarana ibadah, sekolah, dan monumen sejarah yang penting</label>
+          </div>
+          <div class="answer">
+            <input type="radio" id="A6" name="answer1" value="5">
+            <label for="A6"> Bangunan yang digunakan sebagai tempat instalasi gas, minyak/bensin, dan rumah sakit</label>
+          </div>
+          <div class="answer">
+            <input type="radio" id="A7" name="answer1" value="15">
+            <label for="A7"> Bangunan yang mudah meledak dan dapat menimbulkan bahaya yang tidak terkendali baik sekitarnya,misalnya instalasi nuklir</label>
+          </div>
+          <span class="error" id="error1">Pertanyaan ini harus dijawab</span>
+
+          <!-- ------------Question 2----------- -->
+          <p id="question">2. Indeks B (Bahaya Berdasarkan Konstruksi Bangunan)</p>
+          <div class="answer">
+            <input type="radio" id="B1" name="answer2" value="0">
+            <label for="B1"> Seluruh bangunan terbuat dari logam dan mudah menyalurkan listrik</label>
+          </div>
+          <div class="answer">
+            <input type="radio" id="B2" name="answer2" value="1">
+            <label for="B2"> Bangunan dengan konstruksi beton bertulang, atau rangka besi dengan atap logam</label>
+          </div>
+          <div class="answer">
+            <input type="radio" id="B3" name="answer2" value="2">
+            <label for="B3"> Bangunan dengan konstruksi beton bertulang, atau kerangka besi dengan atap bukan logam</label>
+          </div>
+          <div class="answer">
+            <input type="radio" id="B4" name="answer2" value="3">
+            <label for="B4"> Bangunan kayu dengan atap bukan logam</label>
+          </div>
+          <span class="error" id="error2">Pertanyaan ini harus dijawab</span>
+
+          <!-- ------------Question 3----------- -->
+          <p id="question">3. Indeks C (Bahaya Berdasarkan Tinggi Bangunan)</p>
+          <div class="answer">
+            <input type="radio" id="C1" name="answer3" value="0">
+            <label for="C1"> Tinggi bangunan sampai dengan 6 m</label>
+          </div>
+          <div class="answer">
+            <input type="radio" id="C2" name="answer3" value="2">
+            <label for="C2"> Tinggi bangunan sampai dengan 12 m</label>
+          </div>
+          <div class="answer">
+            <input type="radio" id="C3" name="answer3" value="3">
+            <label for="C3"> Tinggi bangunan sampai dengan 17 m</label>
+          </div>
+          <div class="answer">
+            <input type="radio" id="C4" name="answer3" value="4">
+            <label for="C4"> Tinggi bangunan sampai dengan 25 m</label>
+          </div>
+          <div class="answer">
+            <input type="radio" id="C5" name="answer3" value="5">
+            <label for="C5"> Tinggi bangunan sampai dengan 35 m</label>
+          </div>
+          <div class="answer">
+            <input type="radio" id="C6" name="answer3" value="6">
+            <label for="C6"> Tinggi bangunan sampai dengan 50 m</label>
+          </div>
+          <div class="answer">
+            <input type="radio" id="C7" name="answer3" value="7">
+            <label for="C7"> Tinggi bangunan sampai dengan 70 m</label>
+          </div>
+          <div class="answer">
+            <input type="radio" id="C8" name="answer3" value="8">
+            <label for="C8"> Tinggi bangunan sampai dengan 100 m</label>
+          </div>
+          <div class="answer">
+            <input type="radio" id="C9" name="answer3" value="9">
+            <label for="C9"> Tinggi bangunan sampai dengan 140 m</label>
+          </div>
+          <div class="answer">
+            <input type="radio" id="C10" name="answer3" value="10">
+            <label for="C10"> Tinggi bangunan sampai dengan 200 m</label>
+          </div>
+          <span class="error" id="error3">Pertanyaan ini harus dijawab</span>
+
+          <!-- ------------Question 4----------- -->
+          <p id="question">4. Indeks D (Bahaya Berdasarkan Situasi Bangunan)</p>
+          <div class="answer">
+            <input type="radio" id="D1" name="answer4" value="0">
+            <label for="D1"> Bangunan terletak di tanah datar pada semua ketinggian</label>
+          </div>
+          <div class="answer">
+            <input type="radio" id="D2" name="answer4" value="1">
+            <label for="D2"> Bangunan terletak di kaki bukit sampai 3/4 tinggi bukit atau di pegunungan sampai 1000 meter</label>
+          </div>
+          <div class="answer">
+            <input type="radio" id="D3" name="answer4" value="2">
+            <label for="D3"> Bangunan terletak di puncak gunung atau pegunungan yang lebih dari 1000 meter</label>
+          </div>
+          <span class="error" id="error4">Pertanyaan ini harus dijawab</span>
+
+          <!-- ------------Question 5----------- -->
+          <p id="question">5. Indeks E (Bahaya Berdasarkan Pengaruh Kilat dan Hari Guruh)</p>
+          <div class="answer">
+            <input type="radio" id="E1" name="answer5" value="0">
+            <label for="E1"> Jumlah Hari Guruh adalah 2 per Tahun</label>
+          </div>
+          <div class="answer">
+            <input type="radio" id="E2" name="answer5" value="1">
+            <label for="E2"> Jumlah Hari Guruh adalah 4 per Tahun</label>
+          </div>
+          <div class="answer">
+            <input type="radio" id="E3" name="answer5" value="2">
+            <label for="E3"> Jumlah Hari Guruh adalah 8 per Tahun</label>
+          </div>
+          <div class="answer">
+            <input type="radio" id="E4" name="answer5" value="3">
+            <label for="E4"> Jumlah Hari Guruh adalah 16 per Tahun</label>
+          </div>
+          <div class="answer">
+            <input type="radio" id="E5" name="answer5" value="4">
+            <label for="E5"> Jumlah Hari Guruh adalah 32 per Tahun</label>
+          </div>
+          <div class="answer">
+            <input type="radio" id="E6" name="answer5" value="5">
+            <label for="E6"> Jumlah Hari Guruh adalah 64 per Tahun</label>
+          </div>
+          <div class="answer">
+            <input type="radio" id="E7" name="answer5" value="6">
+            <label for="E7"> Jumlah Hari Guruh adalah 128 per Tahun</label>
+          </div>
+          <div class="answer">
+            <input type="radio" id="E8" name="answer5" value="7">
+            <label for="E8"> Jumlah Hari Guruh adalah 256 per Tahun</label>
+          </div>
+          <span class="error" id="error5">Pertanyaan ini harus dijawab</span>
+        </div>
+        <button id="submit">Submit</button>
+      </div>
+    </section>
+    <!-- Kuis Section End -->
+
+    <!-- Score Kuis Section Start -->
+     <section id="result" class="result-quiz">
+      <main class="main-result">
+        <h2>Hasil Skor Kuisioner Sistem Penangkal Petir :</h2>
+        <div class="box-score"></div>
+        <p></p>
+      </main>
+     </section>
+    <!-- Score Kuis Section End -->
+
+    <!-- Go to Proteksi Page Start -->
+    <section id="gotoProteksi" class="goto">
+      <h2>Sepertinya bangunanmu memerlukan sistem penangkal petir. Yuk hitung kebutuhan sistem proteksi bangunanmu dengan <a href="proteksi.html">KLIK DISINI<i data-feather="chevrons-right" class="icon-goto"></i></a></h2>
+    </section>
+    <!-- Go to Proteksi Page End -->
+    
+    <!-- My Script Back End -->
+    <script src="script/script-kuis.js">
+      feather.replace();
+    </script>
+  </body>
+</html>

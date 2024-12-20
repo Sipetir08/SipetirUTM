@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE-edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>SI PETIR WEBPAGE</title>
+  
+      <!-- Fonts -->
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link
+        href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet"
+      />
+  
+      <!-- Feather Icon -->
+      <script src="https://unpkg.com/feather-icons"></script>
+  
+      <!-- My Style -->
+      <link rel="stylesheet" href="css/style.css" />
+    </head>
+  <body>
+    <!-- Navbar Start -->
+    <nav class="navbar">
+      <div class="navbar-logo">
+        <img src="logo-petir.png" alt="petir" />
+        <p>SI PETIR WEBPAGE</p>
+      </div>
+      <div class="navbar-nav">
+        <a href="index.html"><i data-feather="home"></i> Home</a>
+        <a href="kuis.html"><i data-feather="check-square"></i> Kuisioner</a>
+        <a href="proteksi.html"><i data-feather="cloud-lightning"></i> Proteksi</a>
+        <!-- <a href="#kalkulator"><i data-feather="cloud-lightning"></i> Proteksi</a> -->
+      </div>
+    </nav>
+    <!--Navbar end-->
+    
+    <!-- Home Section Start -->
+    <section id="home-page" class="home">
+      <main class="home-content">
+        <h1>SI PETIR WEBPAGE</h1>
+        <h2>Media Informasi Digital Sistem Penangkal dan Perlindungan Bahaya Petir</h2>
+        <p>SI PETIR merupakan halaman web yang berisi informasi digital mengenai bahaya petir dan informasi seputar sistem penangkal petir. Di sini, pengguna dapat
+        mengetahui kebutuhan pemasangan sistem penangkal petir melalui Kuisisoner SI PETIR. Selain itu, pengguna juga dapat menghitung radius perlindungan petir yang aman bagi bangunan Anda.</p>
+      </main>
+    </section>
+    <!-- Home Section End -->
+
+    <!-- Home 2 Section Start -->
+    <section id="blok-kotak" class="blok-kotak">
+      <div class="kotak">
+          <img src="About.jpg" alt="Gambar 1">
+          <h3>ABOUT</h3>
+          <p>SI PETIR merupakan media yang berisi informasi sistem penangkal dan perlindungan bahaya sambaran petir melalui platform digital</p>
+      </div>
+      <div class="kotak">
+          <img src="Kuisioner.jpg" alt="Gambar 2">
+          <h3>KUISIONER</h3>
+          <p>Kuisioner merupakan halaman yang dituju agar pengguna dapat mengetahui tingkat kebutuhan sistem penangkal petir dengan mengisi beberapa pertanyaan</p>
+      </div>
+      <div class="kotak">
+          <img src="Proteksi.jpg" alt="Gambar 3">
+          <h3>PROTEKSI</h3>
+          <p>Proteksi merupakan halaman yang berisi data perhitungan radius perlindungan terhadap bahaya sambaran petir yang dibutuhkan pada suatu bangunan</p>
+      </div>
+  </section>
+    <!-- Home 2 Section End -->
+
+    <!-- Footer Start -->
+    <footer class="footer">
+        <p>&copy; 2024 SI PETIR. Teknik Elektro UTM.</p>
+    </footer>
+    <!-- Footer End -->
+    
+    <!-- My Script -->
+    <script>
+      //Fitur Feather
+      feather.replace();
+
+      document.getElementById("toggleButton").addEventListener("click", function() {
+          const moreText = document.getElementById("moreText");
+          const isHidden = moreText.style.display === "none";
+          if (isHidden) {
+              moreText.style.display = "inline";
+              this.textContent = "Sembunyikan";
+          } else {
+              moreText.style.display = "none";
+              this.textContent = "Lihat Selengkapnya";
+          }
+      });
+
+      // document.getElementById('start-quiz').addEventListener('click', function() {
+      //   window.location.href = 'quiz.html'; // Mengarahkan ke halaman kuis
+      // });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE-edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>SI PETIR WEBPAGE</title>
+  
+      <!-- Fonts -->
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link
+        href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet"
+      />
+  
+      <!-- Feather Icon -->
+      <script src="https://unpkg.com/feather-icons"></script>
+  
+      <!-- My Style -->
+      <link rel="stylesheet" href="css/style.css" />
+
+      <!-- SweetAlert2 -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+      <!-- Library jsPDF -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+    </head>
+  <body>
+    <!-- Navbar Start -->
+    <nav class="navbar">
+      <div class="navbar-logo">
+        <img src="logo-petir.png" alt="petir" />
+        <p>SI PETIR WEBPAGE</p>
+      </div>
+      <div class="navbar-nav">
+        <a href="index.html"><i data-feather="home"></i> Home</a>
+        <a href="kuis.html"><i data-feather="check-square"></i> Kuisioner</a>
+        <a href="proteksi.html"><i data-feather="cloud-lightning"></i> Proteksi</a>
+      </div>
+    </nav>
+    <!--Navbar end-->
+
+
+    <section id="input" class="input-proteksi">
+      <h1>Menghitung Kebutuhan Sistem Penangkal Petir</h1>
+      <p>Untuk menghitung kebutuhan sistem penangkal petir terhadap bangunan Anda, dibutuhkan beberapa data masukan yang mendukung perhitungan, antara lain:</p>
+      <div class="bagian">
+        <div class="form-container">
+          <form id="form-input">
+            <label for="in-panjang">Panjang Bangunan</label>
+            <input type="text" id="in-panjang" class="inputField" placeholder="Panjang satuan meter" required>
+          </form>
+        </div>
+        <div class="form-container">
+          <form id="form-input">
+            <label for="in-lebar">Lebar Bangunan</label>
+            <input type="text" id="in-lebar" class="inputField" placeholder="Lebar satuan meter" required>
+          </form>
+        </div>
+      </div>
+      <div class="bagian">
+        <div class="form-container">
+          <form id="form-input">
+            <label for="in-tinggi">Tinggi Bangunan</label>
+            <input type="text" id="in-tinggi" class="inputField" placeholder="Tinggi satuan meter" required>
+          </form>
+        </div>
+        <div class="form-opsi">
+          <form class="opsi1">
+            <label for="guruh-daerah">Lokasi Wilayah Bangunan</label>
+            <select id="guruh-daerah" name="Daerah">
+              <option value="201">Bogor</option>
+              <option value="141">Bawean</option>
+              <option value="101">Banyuwangi</option>
+              <option value="187">Indramayu</option>
+              <option value="193">Jakarta</option>
+              <option value="189">Jatiwangi</option>
+              <option value="132">Lembang</option>
+              <option value="142">Semarang</option>
+              <option value="112">Serang</option>
+              <option value="161">Surabaya</option>
+              <option value="31">Subang</option>
+              <option value="198">Tegal</option>
+              <option value="198">Mojokerto</option>
+          </select>
+          </form>
+
+          <form class="opsi2">
+            <label for="bahan">Bahan Penghantar Listrik</label>
+            <select id="bahan" name="bahan-penghantar">
+              <option value="1">Tembaga (Cu)</option>
+              <option value="2">Aluminium (Al)</option>
+              <option value="3">Besi (Fe)</option>
+          </select>
+          </form>
+        </div>
+        <!-- <div class="form-container2">
+          
+        </div> -->
+      </div>
+      <button id="calculate">Hitung Proteksi</button>
+    </section>
+  
+    <section id="output" class="output-proteksi">
+      <p>Berdasarkan data bangunan yang kamu masukkan, maka diketahui nilai kebutuhan sistem penangkal petir pada bangunanmu antara lain:</p>
+      <div class="bagian-box">
+        <div class="form-output">
+          <div class="box-label">Area Cakupan Ekuivalen</div>
+          <div id="box-Ae" class="output-box1">-</div>
+        </div>
+        <div class="form-output">
+          <div class="box-label">Rerata Kerapatan Sambaran Petir</div>
+          <div id="box-Ng" class="output-box1">-</div>
+        </div>
+        <div class="form-output">
+          <div class="box-label">Rerata Sambaran Petir</div>
+          <div id="box-Nd" class="output-box1">-</div>
+        </div>
+      </div>
+      <div class="bagian-box">
+        <div class="form-output">
+          <div class="box-label">Efisiensi Tingkat Proteksi</div>
+          <div id="efisiensi" class="output-box1">-</div>
+        </div>
+        <div class="form-output">
+          <div class="box-label">Tingkat Proteksi</div>
+          <div id="tingkat-proteksi" class="output-box1">-</div>
+        </div>
+        <div class="form-output">
+          <div class="box-label">Radius Proteksi</div>
+          <div id="radius-proteksi" class="output-box1">-</div>
+        </div>
+      </div>
+      <div class="bagian-box">
+        <div class="form-output">
+          <div class="box-label">Arus Max Sistem Penyalur Petir</div>
+          <div id="arus-max" class="output-box1">-</div>
+        </div>
+        <div class="form-output">
+          <div class="box-label">Area Terproteksi</div>
+          <div id="area-proteksi" class="output-box1">-</div>
+        </div>
+        <div class="form-output">
+          <div class="box-label">Area Tidak Terproteksi</div>
+          <div id="area-nonproteksi" class="output-box1">-</div>
+        </div>
+      </div>
+      <div class="bagian-box">
+        <div class="form-output">
+          <div class="box-label">Sudut Lindung Sistem Proteksi</div>
+          <div id="sudut-lindung" class="output-box1">-</div>
+        </div>
+        <div class="form-output">
+          <div class="box-label">Penyalur Petir Tambahan</div>
+          <div id="tambahan-sistem" class="output-box1">-</div>
+        </div>
+      </div>
+      <div class="bagian-box">
+        <div class="form-output">
+          <div class="box-label">Min-Size Bahan Terminasi Udara</div>
+          <div id="terminasi-udara" class="output-box1">-</div>
+        </div>
+        <div class="form-output">
+          <div class="box-label">Min-Size Konduktor Penyalur</div>
+          <div id="down-conductor" class="output-box1">-</div>
+        </div>
+      </div>
+      <h2> Unduh File Hasil Perhitungan Sistem Penangkal Petir</h2>
+      <button id="unduh" type="button"><i data-feather="download" class="icon"></i></button>
+    </section>
+
+    <!-- Footer Start -->
+    <footer class="footer">
+        <p>&copy; 2024 SI PETIR. Teknik Elektro UTM.</p>
+    </footer>
+    <!-- Footer End -->
+    
+    <!-- My Script -->
+    <script src="script/script-proteksi.js">
+      feather.replace();
+    </script>
+  </body>
+</html>
